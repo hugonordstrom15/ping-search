@@ -1,10 +1,12 @@
 app = "ping-search"
 
-[build]
-  image = "searxng/searxng:latest"
-
 [env]
   SEARXNG_SETTINGS_PATH = "/etc/searxng/settings.yml"
 
 [[services]]
   internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 8080
+    handlers = ["http"]
