@@ -1,5 +1,8 @@
 app = "ping-search"
 
+[build]
+  dockerfile = "Dockerfile"
+
 [env]
   SEARXNG_SETTINGS_PATH = "/etc/searxng/settings.yml"
 
